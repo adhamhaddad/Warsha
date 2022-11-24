@@ -4,7 +4,7 @@ import '../css/Footer.css';
 const Footer = () => {
   return (
     <footer>
-      Copyrights&copy; Adham Haddad 2022 - {new Date().getFullYear()}
+      Copyrights&copy; Adham Haddad 2021 - {new Date().getFullYear()}
     </footer>
   );
 };

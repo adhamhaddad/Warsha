@@ -1,5 +1,6 @@
 import React from 'react';
 import Container from './Container';
+import Search from './Search';
 import '../css/Header.css';
 
 const Header = () => {
@@ -8,17 +9,7 @@ const Header = () => {
       <Container>
         <nav className='navbar'>
           <h1>warsha</h1>
-          <ul>
-            <li>
-              <i id='search' className='fa-solid fa-search'></i>
-            </li>
-            <li>
-              <i id='user' className='fa-solid fa-user'></i>
-            </li>
-            <li>
-              <i id='chat' className='fa-solid fa-comments'></i>
-            </li>
-          </ul>
+          <Search />
         </nav>
       </Container>
     </header>

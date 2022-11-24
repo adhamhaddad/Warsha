@@ -1,32 +1,27 @@
 header {
-    background-color: rgb(15, 84, 141);
-    box-shadow: rgb(2, 35, 61) 1px 1px 15px;
+    height: 60px;
 }
-
 header .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: green;
+    height: 100%;
 }
 
 header .navbar h1 {
     text-align: center;
-    color: #FFF;
+    color: rgb(58, 42, 7);
     text-transform: capitalize;
     font-size: 20px;
-    text-shadow: rgb(3, 53, 94) 4px 4px 4px;
 }
 
 /* Effects */
 header .navbar h1::selection {
     background-color: #FFF;
-    color: rgb(15, 84, 141)
 }
 
 /* Nav */
 header .navbar ul {
-    background-color: green;
     display: flex;
     justify-content: center;
     align-items: center;
