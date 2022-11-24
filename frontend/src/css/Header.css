@@ -1,0 +1,53 @@
+header {
+    background-color: rgb(15, 84, 141);
+    box-shadow: rgb(2, 35, 61) 1px 1px 15px;
+}
+
+header .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: green;
+}
+
+header .navbar h1 {
+    text-align: center;
+    color: #FFF;
+    text-transform: capitalize;
+    font-size: 20px;
+    text-shadow: rgb(3, 53, 94) 4px 4px 4px;
+}
+
+/* Effects */
+header .navbar h1::selection {
+    background-color: #FFF;
+    color: rgb(15, 84, 141)
+}
+
+/* Nav */
+header .navbar ul {
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .navbar ul li {
+    display: inline-block;
+    color: #FFF;
+    font-size: 20px;
+    transition-property: background, border-radius;
+    transition-duration: .5s;
+    transition-timing-function: ease-in-out;
+    cursor: pointer;
+}
+
+
+/* Effects */
+.navbar ul li:hover {
+    border-radius: 50%;
+    background-color: rgb(3, 53, 94);
+    transition-duration: .5s;
+    transition-property: background, border-radius;
+    transition-timing-function: ease-in-out;
+}

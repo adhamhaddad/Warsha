@@ -1,0 +1,17 @@
+:root {
+  --base-color: rgb(37, 25, 9);
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  list-style: none;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
