@@ -1,13 +1,17 @@
 :root {
   --base-color: rgb(37, 25, 9);
+  --chocolate: #D2691E;
+  --saddlebrown: #753c13;
+  --darkorange: #FF8C00;
 }
 
-body {
+* {
   margin: 0;
   padding: 0;
   outline: none;
   border: none;
   list-style: none;
+  text-decoration: none;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -o-box-sizing: border-box;

@@ -1,0 +1,95 @@
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.profile .cover {
+    margin-top: 10px;
+    height: 200px;
+    background-color: orange;
+    background-image: url(../images/pexels-pixabay-301378.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+}
+.profile .cover .picture {
+    width: 160px;
+    height: 160.9px;
+    margin: auto;
+    background-image: url(../images/test.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 4px;
+    overflow: hidden;
+}
+.profile .cover .picture img {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.profile .titles {
+    text-align: center;
+    padding: 10px 0;
+    color: #FFF
+}
+.profile .titles h2 {
+    font-size: 16px;
+}
+.profile .titles .job {
+    font-size: 14px;
+    font-weight: bold;
+}
+.profile .rates {
+    font-size: 12px;
+}
+.profile .rates .stars {
+    color: var(--darkorange)
+}
+.profile .rates .ratio {
+    padding: 0 10px;
+    font-weight: bold;
+}
+.profile .works {
+    margin: 10px auto;
+    border-radius: 4px;
+    background-color: var(--chocolate);
+    background-image: url(../images/pexels-pixabay-301378.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.profile .works ul {
+    display: flex;
+    flex-flow: row wrap;
+    overflow-y: auto;
+    height: 210px;
+}
+
+.profile .information {
+    display: flex;
+    flex-direction: column;
+    font-size: 12px;
+}
+.profile .information div {
+    display: flex;
+    padding: 5px 0;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.profile .information div > span {
+    display: block;
+    /* width: 130px; */
+    color: #FFF;
+}
+.profile .information div span > i {
+    width: 20px;
+    text-align: center;
+}
+.profile .information div span.identity {
+    color: green
+}

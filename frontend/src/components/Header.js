@@ -1,6 +1,7 @@
 import React from 'react';
 import Container from './Container';
 import Search from './Search';
+import Navigation from './Navigation';
 import '../css/Header.css';
 
 const Header = () => {
@@ -10,6 +11,7 @@ const Header = () => {
         <nav className='navbar'>
           <h1>warsha</h1>
           <Search />
+          <Navigation />
         </nav>
       </Container>
     </header>
