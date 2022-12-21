@@ -1,6 +1,14 @@
 import React from 'react';
 import classes from '../css/Work.module.css';
 
+const rateGenerator = (rates) => {
+    console.log(rates)
+    
+  for (let i = 0; i < rates; i++) {
+    <i key={i} className='fa-solid fa-star'></i>;
+  }
+};
+
 const Work = ({ work_id, date, rates, title, picture }) => {
   return (
     <li className={classes['card']}>
@@ -9,11 +17,7 @@ const Work = ({ work_id, date, rates, title, picture }) => {
           {new Date(date).toLocaleString('en-US', { dateStyle: 'medium' })}
         </span>
         <span className={classes['rates']}>
-          <i className='fa-solid fa-star'></i>
-          <i className='fa-solid fa-star'></i>
-          <i className='fa-solid fa-star'></i>
-          <i className='fa-solid fa-star'></i>
-          <i className='fa-solid fa-star'></i>
+          {rates > 0 && rateGenerator(rates)}
           4.7
         </span>
         <div className={`${classes['card-control']} fa-solid fa-wrench`}>

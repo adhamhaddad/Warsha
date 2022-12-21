@@ -10,9 +10,7 @@ const Search = () => {
     setQuery(e.target.value);
   };
 
-  useEffect(() => {
-    console.log('query')
-  }, [query])
+  useEffect(() => {}, [query]);
 
   return (
     <div className={classes['searchbox']}>
@@ -27,7 +25,8 @@ const Search = () => {
       </div>
       {result.length > 0 && (
         <div className={classes['search-result']}>
-          <ul></ul>
+          <ul>
+          </ul>
         </div>
       )}
     </div>
