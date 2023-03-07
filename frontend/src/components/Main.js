@@ -1,8 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Home from './Home';
-import Profile from './Profile';
-import Messages from './Messages';
+import Home from '../pages/Home';
+import Profile from '../pages/Profile';
+import Messages from '../pages/Messages';
 import '../css/Main.css';
 
 const Main = () => {

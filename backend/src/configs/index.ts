@@ -5,11 +5,11 @@ dotenv.config();
 const configs = {
   port: Number(process.env.PORT),
   host: process.env.HOST,
-  db_user: process.env.DB_USERNAME,
-  db_name: process.env.DB_NAME,
-  db_port: Number(process.env.DB_PORT),
-  db_password: process.env.DB_PASSWORD,
-  token: process.env.SECRET_TOKEN,
+  db_host: process.env.POSTGRES_URI,
+  db_port: Number(process.env.POSTGRES_PORT),
+  db_name: process.env.POSTGRES_DB,
+  db_user: process.env.POSTGRES_USER,
+  db_password: process.env.POSTGRES_PASSWORD,
   salt: Number(process.env.SALT),
   peper: process.env.PEPER
 };

@@ -3,16 +3,17 @@ import jwt from 'jsonwebtoken';
 import configs from '../configs';
 import verifyToken from '../middlewares/verifyToken';
 import User from '../model/User';
+import fs from 'fs';
+import path from 'path';
 
 const user = new User();
 
 const createUser = async (req: Request, res: Response) => {
   try {
     const response = await user.createUser(req.body);
-    const token = jwt.sign(response, configs.token as string);
     res.status(201).json({
       status: true,
-      data: { ...response, token },
+      data: { ...response },
       message: 'User created successfully!'
     });
   } catch (err) {
@@ -64,12 +65,27 @@ const authenticate = async (req: Request, res: Response) => {
         message: 'Username or password is incorrect'
       });
     }
-    const token = jwt.sign({ response }, configs.token as string);
-    res.status(200).json({
-      status: true,
-      date: { ...response, token },
-      message: 'User authenticated successfully!'
-    });
+
+    fs.readFile(
+      path.join(__dirname, '..', 'keys', 'private.key'),
+      { encoding: 'utf8' },
+      (err, privateKey) => {
+        if (err) err.message;
+        jwt.sign(
+          { ...response },
+          privateKey,
+          { algorithm: 'RS256' },
+          (err, token) => {
+            if (err) err.message;
+            res.status(201).json({
+              status: true,
+              date: { ...response, token },
+              message: 'User authenticated successfully!'
+            });
+          }
+        );
+      }
+    );
   } catch (err) {
     res.status(400).json({
       status: false,
